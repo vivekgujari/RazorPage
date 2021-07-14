@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyGym.Models;
 
 namespace MyGym.DataAccess
 {
@@ -12,5 +13,6 @@ namespace MyGym.DataAccess
             : base(options)
         {
         }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }
